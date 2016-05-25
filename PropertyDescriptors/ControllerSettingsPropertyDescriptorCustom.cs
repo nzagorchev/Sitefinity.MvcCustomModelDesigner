@@ -47,7 +47,7 @@ namespace SitefinityWebApp.PropertyDescriptors
                     if (controllerSettings.Values.ContainsKey(prop.Name))
                     {
                         var actualProp = controllerSettings.Values[prop.Name];
-                        if (prop.PropertyType.FullName != actualProp.GetType().FullName)
+                        if (actualProp != null && prop.PropertyType.FullName != actualProp.GetType().FullName)
                         {
                             prop = new DynamicPropertyDescriptorPreview(prop.Name, controllerSettings);
                             properties.RemoveAt(i);
