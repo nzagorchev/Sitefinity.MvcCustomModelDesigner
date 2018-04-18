@@ -23,6 +23,7 @@ namespace SitefinityWebApp
 			// ControllerSettingsPropertyDescriptorCustom
             ControllerSettingsPropertyDescriptorCustom.Install("Telerik.Sitefinity.Mvc.Proxy.MvcControllerProxy.Settings");
 			ControllerSettingsPropertyDescriptorCustom.Install(string.Format("{0}.{1}", typeof(Telerik.Sitefinity.Mvc.Proxy.MvcProxyBase).FullName, "Settings"));
+			ControllerSettingsPropertyDescriptorCustom.Install(string.Format("{0}.{1}", typeof(Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Controllers.MvcWidgetProxy).FullName, "Settings"));
 
             // MVC News Model
             FrontendModule.Current.DependencyResolver.Rebind<INewsModel>().To<NewsModelCustom>();
